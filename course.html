@@ -1,0 +1,130 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>University Website Design - Easy Tutorials</title>
+<link rel="icon" href="images/logo1-removebg-preview.png">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+<section class="sub-header">
+<nav>
+<a href="index.html"><img src="images/logo1-removebg-preview.png"></a>
+
+<div class="nav-links">
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="about.html">ABOUT</a></li>
+<li><a href="course.html">COURSE</a></li>
+<li><a href="blog.html">BLOG</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+</ul>
+</div>
+</nav>
+
+
+<h1>Our Courses</h1>
+</section>
+<section class="course">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="row">
+            <div class="course-col">
+                <h3><img src="images/book-removebg-preview.png" width="30" height="30"> Intermediate</h3>
+                <p>Our Intermediate program builds a strong academic foundation for students. It focuses on core subjects, analytical thinking, and communication skills to prepare students for higher education and competitive examinations.
+                    <br><br>
+                </p>
+            </div>
+            <div class="course-col">
+                <h3><img src="images/degree-removebg-preview.png" width="30" height="30">  Degree</h3>
+                <p>Our Undergraduate Degree programs are designed to provide in-depth knowledge and practical exposure in various disciplines. With experienced faculty and project-based learning, students gain both theoretical understanding and real-world experience.
+                <br><br>
+                </p>
+            </div>
+            <div class="course-col">
+                <h3><img src="images/pg-removebg-preview (1).png" width="30" height="30"> Graduation</h3>
+                <p>Our Postgraduate programs focus on advanced learning, research, and specialization. Students are trained with industry-oriented curriculum, internships, and leadership skills to excel in their professional careers.
+                <br><br>
+                </p>
+            </div>
+        </div>
+    </section>
+
+<div class="cards">
+
+<div class="card">
+<h3>Intermediate</h3>
+<p>MPC, BiPC</p>
+<button onclick="openForm()">Apply Now</button>
+</div>
+
+<div class="card">
+<h3>Degree</h3>
+<p>B.Com, B.Sc, BBA</p>
+<button onclick="openForm()">Apply Now</button>
+</div>
+
+<div class="card">
+<h3>Post Graduation</h3>
+<p>MBA, MCA</p>
+<button onclick="openForm()">Apply Now</button>
+</div>
+
+</div>
+</section>
+
+
+<!--  POPUP FORM -->
+<div class="popup" id="formPopup">
+<div class="popup-content">
+
+<span class="close" onclick="closeForm()">✖</span>
+
+<h2>Application Form</h2>
+
+<form onsubmit="submitForm(event)">
+
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email" required>
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+<option value="">Select Course</option>
+<option>B.Com</option>
+<option>B.Sc</option>
+<option>BBA</option>
+<option>MBA</option>
+<option>MCA</option>
+</select>
+
+<textarea placeholder="Why do you want to join?" required></textarea>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+</div>
+
+<script>
+// open popup
+function openForm(){
+document.getElementById("formPopup").style.display="flex";
+}
+
+// close popup
+function closeForm(){
+document.getElementById("formPopup").style.display="none";
+}
+
+// submit form
+function submitForm(e){
+e.preventDefault();
+alert("Application Submitted Successfully ");
+closeForm();
+}
+</script>
+
+</body>
+</html>
